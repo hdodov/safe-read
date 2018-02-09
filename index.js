@@ -1,9 +1,13 @@
-module.exports = function (obj, path, options) {
-    if (
-        typeof obj != 'object' || obj === null ||
-        typeof path != 'string'
-    ) {
-        return undefined;
+var debug = require('debug')('safe-read');
+
+module.exports = function (obj, path) {
+    if (typeof obj != 'object' || obj === null) {
+        debug('Target is not an object');
+        return;
+    }
+
+    if (typeof path != 'string') {
+        return;
     }
 
     var props = path.split('.')
@@ -14,11 +18,8 @@ module.exports = function (obj, path, options) {
             obj = obj[props[i]];
             traversed += '.' + props[i];
         } else {
-            if (options && options.debug) {
-                console.warn('safe-read: Undefined property "' + props[i] + '" in Object' + traversed);
-            }
-
-            return undefined;
+            debug('Undefined property "%s" in Object%s', props[i], traversed);
+            return;
         }
     }
 

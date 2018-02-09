@@ -2,11 +2,13 @@
 Allows you to extract a specific property in a deep nested object without having to check the existance of each property in-between.
 
 # Install
+
 ```
 npm install safe-read --save
 ```
 
 # Example
+
 ```js
 var itemObj = {
     test: [
@@ -37,6 +39,10 @@ console.log(safeRead(itemObj, 'test.0.foo.bar.0.0'));       // 'a'
 console.log(safeRead(errorObj, 'test.0.foo.bar.0.0'));      // undefined
 console.log(safeRead(errorObj, 'test.0.error.0.message'));  // 'Foobar!'
 ```
+
+# Debugging
+
+Debugging is done via the [debug](https://www.npmjs.com/package/debug) package and the `DEBUG` environmental variable.
 
 # Use cases
 Can be used when extracting data from a complex API response like the ones from Amazon’s [Product Advertising API](https://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html):
