@@ -39,34 +39,30 @@ console.log(safeRead(errorObj, 'test.0.error.0.message'));  // 'Foobar!'
 ```
 
 # Use cases
-Can be used when extracting data from a complex API response like the ones from Amazon’s [Product Advertising API](https://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html).
+Can be used when extracting data from a complex API response like the ones from Amazon’s [Product Advertising API](https://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html):
 
-<details>
-    <summary>Sample Product Advertising API response</summary>
-    ```js
-    var response = [
+```js
+var response = [
+  {
+    ...
+    "ItemAttributes":[
       {
         ...
-        "ItemAttributes":[
+        "UPCList":[
           {
-            ...
-            "UPCList":[
-              {
-                "UPCListElement":[
-                  "027242877115",
-                  "799959956994",
-                  "780746812258"
-                ]
-              }
-            ],
-            ...
+            "UPCListElement":[
+              "027242877115",
+              "799959956994",
+              "780746812258"
+            ]
           }
-        ]
+        ],
+        ...
       }
-    ];
-    ```
-</details>
-<br>
+    ]
+  }
+];
+```
 
 Normally, to get the first `UPCListElement`, you would have to do something like:
 
