@@ -44,6 +44,6 @@ var response = [
 ];
 
 console.log('itemObj', safeRead(itemObj, 'test.0.foo.bar.0.0'));
-console.log('errorObj', safeRead(errorObj, 'test.0.foo.bar.0.0'));
+console.log('errorObj', safeRead(errorObj, 'test.0.foo.bar.0.0', {debug: true}));
 console.log('errorObj', safeRead(errorObj, 'test.0.error.0.message'));
 console.log('response', safeRead(response, '0.ItemAttributes.0.UPCList.0.UPCListElement.0'));
