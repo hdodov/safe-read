@@ -1,0 +1,34 @@
+{
+  "name": "safe-read",
+  "version": "1.0.0",
+  "homepage": "https://github.com/hdodov/safe-read",
+  "description": "Allows you to extract a specific property in a deep nested object without having to check the existance of each property in-between.",
+  "author": "Hristiyan Dodov",
+  "repository": "hdodov/safe-read",
+  "bugs": {
+    "url": "https://github.com/hdodov/safe-read/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "obtain",
+    "read",
+    "extract",
+    "property",
+    "value",
+    "assign",
+    "deep",
+    "nested",
+    "complex",
+    "data",
+    "safe",
+    "graceful",
+    "exist"
+  ]
+}
