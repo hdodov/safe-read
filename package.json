@@ -1,6 +1,6 @@
 {
   "name": "safe-read",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "homepage": "https://github.com/hdodov/safe-read",
   "description": "Allows you to extract a specific property in a deep nested object without having to check the existance of each property in-between.",
   "author": "Hristiyan Dodov",

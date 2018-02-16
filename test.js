@@ -48,4 +48,6 @@ console.log('errorObj', safeRead(errorObj, 'test.0.foo.bar.0.0'));
 console.log('errorObj', safeRead(errorObj, 'test.0.error.0.message'));
 console.log('response', safeRead(response, '0.ItemAttributes.0.UPCList.0.UPCListElement.0'));
 console.log('undefined', safeRead(undefined, 'foo'));
+console.log('null', safeRead({de: {item: null}}, 'de.item.attributes.0.UPC.0'));
+console.log('null string', safeRead({a: 3}, 'a.null'));
 console.log('nullpath', safeRead({test: 5}, null));
